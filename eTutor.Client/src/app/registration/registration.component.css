@@ -1,0 +1,13 @@
+.mb-5 {
+    margin-bottom: 1rem !important;
+}
+.mt-4 {
+    margin-top: 1rem !important;
+}
+
+@media (min-width: 1200px) {
+    .p-xl-5 {
+        padding: 1rem !important;
+    }
+}
+

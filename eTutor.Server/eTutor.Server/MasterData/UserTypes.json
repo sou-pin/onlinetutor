@@ -1,0 +1,11 @@
+[
+  {
+    "UserType": "Student"
+  },
+  {
+    "UserType": "Teacher"
+  },
+  {
+    "UserType": "Admin"
+  }
+]

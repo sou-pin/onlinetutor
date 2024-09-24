@@ -1,0 +1,126 @@
+<!-- Login 8 - Bootstrap Brain Component -->
+<section class="bg-light p-3 p-md-4 p-xl-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xxl-11">
+          <div class="card border-light-subtle shadow-sm">
+            <div class="row g-0">
+              <div class="col-12 col-md-6">
+                <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="./assets/login-bg.svg" alt="Welcome back you've been missed!">
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10">
+                  <div class="card-body p-3 p-md-4 p-xl-5">
+                    <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+                      <div class="row gy-3 overflow-hidden">
+                        <!-- <div class="col-12">
+                            <div class="btn-group" name="userType" btnRadioGroup [(ngModel)]="model.userType">
+                                <label class="btn btn-primary mb-0" btnRadio="Teacher">
+                                    Teacher
+                                </label>
+                                <label class="btn btn-primary mb-0" btnRadio="Student">
+                                    Student
+                                </label>
+                            </div>
+                        </div> -->
+                        <div class="col-4">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" id="firstname" placeholder="name@example.com" required #firstName="ngModel">
+                            <label for="firstName" class="form-label">First Name</label>
+                          </div>
+                          <div 
+                            *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="firstName.errors?.['required']">FirstName is required.</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="middleName" [(ngModel)]="model.middleName" id="middlename" placeholder="name@example.com">
+                              <label for="middleName" class="form-label">Middle Name</label>
+                            </div>
+                          </div>
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" id="lastname" placeholder="name@example.com" required #lastName="ngModel">
+                              <label for="lastName" class="form-label">Last Name</label>
+                            </div>
+                            <div 
+                            *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="lastName.errors?.['required']">LastName is required.</div>
+                          </div>
+                          </div>
+                        <div class="col-12">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="emailid" [(ngModel)]="model.emailid" id="emailid" value="" placeholder="Password" required #emailid="ngModel">
+                            <label for="emailid" class="form-label">Email Id</label>
+                          </div>
+                          <div 
+                            *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="emailid.errors?.['required']">Email is required.</div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="phone" [(ngModel)]="model.phone" id="phone" value="" placeholder="XXXXXXXXXX" required #phone="ngModel">
+                              <label for="phone" class="form-label">Phone Number</label>
+                            </div>
+                            <div 
+                            *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="phone.errors?.['required']">Phone is required.</div>
+                          </div>
+                          </div>
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" name="password" [(ngModel)]="model.password" id="password" value="" placeholder="Password" required #password="ngModel">
+                                <label for="password" class="form-label">Password</label>
+                            </div>
+                            <div 
+                            *ngIf="password.invalid && (password.dirty || password.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="password.errors?.['required']">Password is required.</div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" name="repassword" [(ngModel)]="model.repassword" id="repassword" value="" placeholder="Password" required #repassword="ngModel">
+                                <label for="repassword" class="form-label">Reenter Password</label>
+                            </div>
+                            <div 
+                            *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)"
+                            class="custom-validation-alert">
+                                <div *ngIf="repassword.errors?.['required']">Retype Password is required.</div>
+                          </div>
+                          <div 
+                            *ngIf="password.valid && repassword.valid && repassword.dirty && password.value != repassword.value"
+                            class="custom-validation-alert">
+                                <div>Passwords not matched.</div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-grid">
+                            <button class="btn btn-dark btn-lg" type="submit" [disabled]="registerForm.form.invalid || password.value != repassword.value">Register</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center mt-4">
+                          <p>Already member?</p>
+                          <a href="#!" class="link-secondary text-decoration-none">login</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
